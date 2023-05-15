@@ -16,5 +16,9 @@
   },
   "homepage": "https://github.com/emapeire/react-testing-app#readme",
   "keywords": [],
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  },
+  "devDependencies": {},
   "description": ""
 }
