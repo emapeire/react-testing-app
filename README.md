@@ -1,2 +1,1 @@
-# my-app
-# birthday-reminder
+# react-testing-app
