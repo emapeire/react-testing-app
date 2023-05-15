@@ -1,15 +1,38 @@
+const visualOptions = {
+    apiKey: process.env.SCREENER_API_KEY,
+    projectName: 'my-app',
+    scrollAndStitchScreenshots: true,
+};
+
+const suaceOptions = {
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
+};
+
 exports.config = {
     //
     // ====================
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: ['browser', {
-        preset: 'react',
-        // start browser window when `DEBUG` environment variable is set
-        headless: !Boolean(process.env.DEBUG)
-    }],
+    runner: 'local',
     
+    //
+    // =================
+    // Service Providers
+    // =================
+    // WebdriverIO supports Sauce Labs, Browserstack, Testing Bot and LambdaTest (other cloud providers
+    // should work too though). These services define specific user and key (or access key)
+    // values you need to put in here in order to connect to these services.
+    //
+    user: process.env.SAUCE_USERNAME,
+    key: process.env.SAUCE_ACCESS_KEY,
+    //
+    // If you run your tests on Sauce Labs you can specify the region you want to run your tests
+    // in via the `region` property. Available short handles for regions are `us` (default), `eu` and `apac`.
+    // These regions are used for the Sauce Labs VM cloud and the Sauce Labs Real Device Cloud.
+    // If you don't provide the region it will default for the `us`
+    region: 'us',
     //
     // ==================
     // Specify Test Files
@@ -27,7 +50,8 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './src/spec/**/*.js'
+        // ToDo: define location for spec files here
+        './src/spec/*.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -49,15 +73,40 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 100,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    hostname: 'hub.screener.io',
+    port: 443,
+    protocol: 'https',
+    path: '/wd/hub',
     capabilities: [{
         // capabilities for local browser web tests
-        browserName: 'chrome' // or "firefox", "microsoftedge", "safari"
+        browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
+        browserVersion: 'latest',
+        platformName: 'Windows 10',
+        'sauce:options': {
+            ...suaceOptions,
+        },
+        'sauce:visual': {
+            ...visualOptions,
+            viewPortSize: '1366x768',
+        },
+    }, {
+        // capabilities for local mobile web tests
+        browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
+        browserVersion: 'latest',
+        platformName: 'Android',
+        'sauce:options': {
+            ...suaceOptions,
+        },
+        'sauce:visual': {
+            ...visualOptions,
+            viewPortSize: '360x640',
+        },
     }],
     //
     // ===================
@@ -90,7 +139,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: '',
+    baseUrl: 'http://localhost:3000',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -106,8 +155,11 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['chromedriver'],
-    
+    services: [
+        ['sauce', {
+            sauceConnect: true
+        }]
+    ],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks

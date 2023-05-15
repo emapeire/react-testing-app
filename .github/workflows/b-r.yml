@@ -2,8 +2,9 @@ name: Birthday-reminder CI
 
 env:
   CI: true
-  SOUCE_LABS_USERNAME: ${{ secrets.SAUCE_LABS_USERNAME }}
-  SOUCE_LABS_KEY: ${{ secrets.SAUCE_LABS_KEY }}
+  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
+  SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
 
 on:
   push:
