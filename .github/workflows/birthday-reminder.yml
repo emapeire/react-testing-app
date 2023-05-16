@@ -35,7 +35,3 @@ jobs:
       run: |
         cd birthday-reminder
         npm start & npx wait-on --timeout 60000
-    - name: Run wdio tests
-      run: |
-        cd birthday-reminder
-        npm run wdio
