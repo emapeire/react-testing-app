@@ -7,13 +7,13 @@ const SocialDetails = () => {
   return (
     <>
       <Div3>
-        <SocialIcons href={socialUrls.github}>
+        <SocialIcons data-testid="github" href={socialUrls.github}>
           <AiFillGithub size="3rem" />
         </SocialIcons>
-        <SocialIcons href={socialUrls.twitter}>
+        <SocialIcons data-testid="twitter" href={socialUrls.twitter}>
           <AiFillTwitterCircle size="3rem" />
         </SocialIcons>
-        <SocialIcons href={socialUrls.instagram}>
+        <SocialIcons data-testid="instagram" href={socialUrls.instagram}>
           <AiFillInstagram size="3rem" />
         </SocialIcons>
       </Div3>

@@ -1,4 +1,4 @@
-export const projects = [
+const projects = [
   {
     title: 'MERN Memories',
     description: "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
@@ -36,11 +36,5 @@ export const projects = [
     id: 3,
   },
 ];
-
-export const TimeLineData = [
-  { year: 2017, text: 'Started my journey', },
-  { year: 2018, text: 'Worked as a freelance developer', },
-  { year: 2019, text: 'Founded JavaScript Mastery', },
-  { year: 2020, text: 'Shared my projects with the world', },
-  { year: 2021, text: 'Started my own platform', },
-];
+// This is the way to work with jest.
+module.exports = { projects };

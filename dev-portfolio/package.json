@@ -6,13 +6,12 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "test:visual": "npx happo-e2e -- npx cypress run",
+    "test:visual": "npx cypress run",
     "test:jest": "jest",
     "happo": "happo",
     "happo-ci-github-actions": "happo-ci-github-actions"
   },
   "dependencies": {
-    "cypress": "^9.5.0",
     "next": "^12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -22,6 +21,7 @@
   },
   "devDependencies": {
     "@cypress-audit/lighthouse": "^1.2.0",
+    "cypress": "^12.12.0",
     "cypress-audit": "^1.1.0",
     "happo-cypress": "^3.0.1",
     "happo-e2e": "^1.0.3",
