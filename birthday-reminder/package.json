@@ -15,7 +15,7 @@
         "build": "CI= react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "wdio": "wdio run wdio.conf.js"
+        "wdio": "wdio run ./wdio.conf.js"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -38,6 +38,8 @@
         "@wdio/mocha-framework": "^8.10.2",
         "@wdio/sauce-service": "^8.10.2",
         "@wdio/spec-reporter": "^8.10.2",
+        "chromedriver": "^113.0.0",
+        "wdio-chromedriver-service": "^8.1.1",
         "wdio-wait-for": "^3.0.4"
     }
 }

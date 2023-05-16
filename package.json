@@ -6,7 +6,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --testPathIgnorePatterns=src/spec",
+    "test": "react-scripts test --testPathIgnorePatterns=src/specs",
     "eject": "react-scripts eject",
     "wdio": "wdio run ./wdio.conf.js"
   },

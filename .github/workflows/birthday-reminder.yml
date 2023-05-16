@@ -25,21 +25,21 @@ jobs:
         cache: 'npm'
     - name: Install Dependencies
       run: |
-        cd birthday-app/setup
+        cd birthday-app
         npm install & npm ci
     - name: Build the app
       run: |
-        cd birthday-app/setup
+        cd birthday-app
         npm run build --if-present
     - name: Run componet tests
       run: |
-        cd birthday-app/setup
+        cd birthday-app
         npm run test
     - name: Start the app
       run: |
-        cd birthday-app/setup
+        cd birthday-app
         npm start & npx wait-on --timeout 60000
     - name: Run wdio tests
       run: |
-        cd birthday-app/setup
+        cd birthday-app
         npm run wdio

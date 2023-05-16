@@ -4,11 +4,7 @@ exports.config = {
     // Runner Configuration
     // ====================
     // WebdriverIO supports running e2e tests as well as unit and component tests.
-    runner: ['browser', {
-        preset: 'react',
-        // start browser window when `DEBUG` environment variable is set
-        headless: !Boolean(process.env.DEBUG)
-    }],
+    runner: 'local',
     
     //
     // ==================
@@ -27,7 +23,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './src/specs/**/*.js'
+        './test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -90,7 +86,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: '',
+    baseUrl: 'http://localhost:3000',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
