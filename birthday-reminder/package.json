@@ -6,8 +6,6 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
         "react-scripts": "3.4.3"
     },
     "scripts": {
@@ -33,12 +31,16 @@
         ]
     },
     "devDependencies": {
+        "@vitejs/plugin-react": "^4.0.0",
+        "@wdio/browser-runner": "^8.10.2",
         "@wdio/cli": "^8.10.2",
         "@wdio/local-runner": "^8.10.2",
         "@wdio/mocha-framework": "^8.10.2",
         "@wdio/sauce-service": "^8.10.2",
         "@wdio/spec-reporter": "^8.10.2",
         "chromedriver": "^113.0.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "wdio-chromedriver-service": "^8.1.1",
         "wdio-wait-for": "^3.0.4"
     }
