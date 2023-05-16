@@ -12,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --testPathIgnorePatterns=src/spec",
+    "test": "react-scripts test --testPathIgnorePatterns=src/specs",
     "eject": "react-scripts eject",
     "wdio": "wdio run ./wdio.conf.js"
   },
@@ -46,6 +46,7 @@
     "chromedriver": "^113.0.0",
     "jest": "^27.5.1",
     "react": "^18.2.0",
+    "screener-storybook": "^1.0.0",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-wait-for": "^3.0.4"
   }
