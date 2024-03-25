@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
-    "@wdio/cli": "^8.10.2",
+    "@wdio/cli": "^8.35.1",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -43,7 +43,7 @@
     "@wdio/mocha-framework": "^8.10.2",
     "@wdio/sauce-service": "^8.10.2",
     "@wdio/spec-reporter": "^8.10.2",
-    "chromedriver": "^113.0.0",
+    "chromedriver": "^123.0.0",
     "jest": "^27.5.1",
     "react": "^18.2.0",
     "wdio-chromedriver-service": "^8.1.1",

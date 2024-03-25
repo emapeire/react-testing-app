@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/emapeire/react-testing-app#readme",
   "devDependencies": {
-    "chromedriver": "^113.0.0",
+    "chromedriver": "^123.0.0",
     "wdio-chromedriver-service": "^8.1.1"
   },
   "dependencies": {
-    "@wdio/cli": "^8.10.2"
+    "@wdio/cli": "^8.35.1"
   }
 }
