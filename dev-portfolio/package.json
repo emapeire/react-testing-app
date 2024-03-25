@@ -12,7 +12,7 @@
     "happo-ci-github-actions": "happo-ci-github-actions"
   },
   "dependencies": {
-    "next": "^12.1.0",
+    "next": "^13.5.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -21,11 +21,11 @@
   },
   "devDependencies": {
     "@cypress-audit/lighthouse": "^1.2.0",
-    "cypress": "^12.12.0",
+    "cypress": "^13.7.1",
     "cypress-audit": "^1.1.0",
     "happo-cypress": "^3.0.1",
     "happo-e2e": "^1.0.3",
-    "happo.io": "^7.0.2",
+    "happo.io": "^9.1.2",
     "jest": "^27.5.1"
   }
 }
