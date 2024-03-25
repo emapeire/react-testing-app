@@ -12,7 +12,7 @@
     "happo-ci-github-actions": "happo-ci-github-actions"
   },
   "dependencies": {
-    "next": "^12.1.0",
+    "next": "^14.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -25,7 +25,7 @@
     "cypress-audit": "^1.1.0",
     "happo-cypress": "^3.0.1",
     "happo-e2e": "^1.0.3",
-    "happo.io": "^7.0.2",
+    "happo.io": "^9.1.2",
     "jest": "^27.5.1"
   }
 }
