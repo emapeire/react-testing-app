@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@cypress-audit/lighthouse": "^1.2.0",
-    "cypress": "^12.12.0",
+    "cypress": "^13.7.1",
     "cypress-audit": "^1.1.0",
     "happo-cypress": "^3.0.1",
     "happo-e2e": "^1.0.3",
