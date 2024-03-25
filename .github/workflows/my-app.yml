@@ -5,44 +5,43 @@ name: My-App CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Install Dependencies
-      run: |
-        cd my-app
-        npm install & npm ci
-    - name: Build the app
-      run: |
-        cd my-app
-        npm run build --if-present
-    - name: Run componet tests
-      run: |
-        cd my-app
-        npm run test
-    - name: Start the app
-      run: |
-        cd my-app
-        npm start & npx wait-on --timeout 60000
-    - name: Run wdio tests
-      run: |
-        cd my-app
-        npm run wdio
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install Dependencies
+        run: |
+          cd my-app
+          npm install & npm ci
+      - name: Build the app
+        run: |
+          cd my-app
+          npm run build --if-present
+      - name: Run componet tests
+        run: |
+          cd my-app
+          npm run test
+      - name: Start the app
+        run: |
+          cd my-app
+          npm start & npx wait-on --timeout 60000
+      - name: Run wdio tests
+        run: |
+          cd my-app
+          npm run wdio
