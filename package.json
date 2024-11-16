@@ -26,6 +26,6 @@
     "wdio-chromedriver-service": "^8.1.1"
   },
   "dependencies": {
-    "@wdio/cli": "^8.10.2"
+    "@wdio/cli": "^8.40.6"
   }
 }
