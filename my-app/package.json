@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
-    "@wdio/cli": "^8.10.2",
+    "@wdio/cli": "^8.40.6",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
